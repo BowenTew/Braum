@@ -1,0 +1,20 @@
+{
+  "name": "web-check",
+  "version": "1.0.0",
+  "description": "Example project for @braum/typescript-config tsconfig.web.json",
+  "main": "index.js",
+  "scripts": {
+    "ts-check": "tsc --noEmit",
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.15.0",
+  "devDependencies": {
+    "@braum/typescript-config": "workspace:*",
+    "typescript": "^5.9.3",
+    "@types/react": "^18.3.0",
+    "@types/react-dom": "^18.3.0"
+  }
+}

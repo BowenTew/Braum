@@ -1,0 +1,20 @@
+{
+  "name": "@braum/typescript-config",
+  "version": "1.0.0",
+  "description": "TypeScript configuration presets for Braum projects",
+  "private": true,
+  "main": "tsconfig.base.json",
+  "types": "tsconfig.base.json",
+  "files": [
+    "tsconfig.*.json",
+    "README.md"
+  ],
+  "keywords": [
+    "typescript",
+    "tsconfig",
+    "configuration",
+    "preset"
+  ],
+  "author": "",
+  "license": "MIT"
+}

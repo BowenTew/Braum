@@ -1,0 +1,19 @@
+{
+  "name": "node-check",
+  "version": "1.0.0",
+  "description": "Example project for @braum/typescript-config/tsconfig.node.json",
+  "main": "dist/index.js",
+  "scripts": {
+    "ts-check": "tsc --noEmit",
+    "build": "tsc -p tsconfig.json"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.15.0",
+  "devDependencies": {
+    "@braum/typescript-config": "workspace:*",
+    "@types/node": "^24.10.1",
+    "typescript": "^5.9.3"
+  }
+}

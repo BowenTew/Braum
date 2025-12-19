@@ -1,0 +1,17 @@
+{
+  "name": "base-check",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "ts-check": "tsc --noEmit"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.15.0",
+  "devDependencies": {
+    "@braum/prettier": "workspace:*",
+    "typescript": "^5.9.3"
+  }
+}

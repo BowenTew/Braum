@@ -1,0 +1,15 @@
+{
+  // 使用 workspace 内的 ESLint
+  "eslint.nodePath": "node_modules",
+
+  // 启用 ESLint 插件
+  "eslint.enable": true,
+
+  // 对 ESLint 9 + Flat Config 的支持
+  "eslint.experimental.useFlatConfig": true,
+
+  // 在输入时就提示（而不仅仅是保存时）
+  "eslint.run": "onType",
+}
+
+

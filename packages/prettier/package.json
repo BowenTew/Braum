@@ -1,0 +1,29 @@
+{
+  "name": "@braum/prettier",
+  "version": "1.0.0",
+  "description": "Base Prettier configuration from Braum",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.mts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsdown"
+  },
+  "keywords": [
+    "prettier",
+    "config",
+    "braum",
+    "base"
+  ],
+  "author": "Braum Team",
+  "license": "MIT",
+  "dependencies": {
+    "prettier": ">=3.0.0",
+    "@prettier/plugin-xml": "^3.4.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

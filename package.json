@@ -1,0 +1,33 @@
+{
+  "name": "Braum",
+  "version": "1.0.0",
+  "description": "Braum monorepo, includes commitlint, cz, eslint, prettier, typescript, etc.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "prepare": "husky",
+    "type-check": "tsc --noEmit",
+    "format:check": "prettier --check .",
+    "lint:check": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "format:fix": "prettier --write .",
+    "ci-check": "pnpm format:check && pnpm lint:check && pnpm type-check",
+    "build": "npx tsx scripts/build.ts",
+    "clean": "npx tsx scripts/clean.ts"
+  },
+  "devDependencies": {
+    "@braum/commitlint": "workspace:*",
+    "@braum/cz": "workspace:*",
+    "@braum/eslint": "workspace:*",
+    "@braum/prettier": "workspace:*",
+    "@braum/typescript-config": "workspace:*",
+    "@commitlint/cli": "^19.8.1",
+    "@types/node": "^24.10.1",
+    "eslint": "^9.39.1",
+    "husky": "^9.1.7",
+    "prettier": "^3.7.1",
+    "tsdown": "0.17.0-beta.5",
+    "typescript": "^5.0.0",
+    "vitest": "^4.0.16"
+  }
+}

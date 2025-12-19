@@ -1,0 +1,11 @@
+{
+  "extends": "@braum/typescript-config/tsconfig.lib.json",
+  "compilerOptions": {
+    "rootDir": "./",
+    "outDir": "./dist",
+    "lib": ["ESNext", "DOM"],
+    "composite": true
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
+}
