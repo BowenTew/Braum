@@ -10,6 +10,11 @@
       "import": "./dist/index.mjs",
       "require": "./dist/index.js",
       "types": "./dist/index.d.ts"
+    },
+    "./extend": {
+      "import": "./dist/extend.mjs",
+      "require": "./dist/extend.cjs",
+      "types": "./dist/extend.d.ts"
     }
   },
   "files": [
