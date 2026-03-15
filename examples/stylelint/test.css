@@ -1,0 +1,116 @@
+.test {
+  color: red;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  text-overflow: ellipsis;
+  text-wrap: wrap;
+  text-overflow: ellipsis;
+}
+
+/* ❌ 以下代码会触发 plugin/no-low-performance-animation 错误 */
+
+/* 1. transition 使用低性能属性 */
+.bad-transition-width {
+  width: 100px;
+  transition: width 0.3s ease; /* ❌ width 会触发 layout */
+}
+
+.bad-transition-height {
+  height: 100px;
+  transition: height 0.3s ease; /* ❌ height 会触发 layout */
+}
+
+.bad-transition-margin {
+  margin: 10px;
+  transition: margin 0.3s ease; /* ❌ margin 会触发 layout */
+}
+
+.bad-transition-padding {
+  padding: 10px;
+  transition: padding 0.3s ease; /* ❌ padding 会触发 layout */
+}
+
+.bad-transition-top {
+  top: 0;
+  transition: top 0.3s ease; /* ❌ top 会触发 layout */
+}
+
+.bad-transition-left {
+  left: 0;
+  transition: left 0.3s ease; /* ❌ left 会触发 layout */
+}
+
+.bad-transition-color {
+  color: red;
+  transition: color 0.3s ease; /* ❌ color 会触发 paint */
+}
+
+.bad-transition-border {
+  border: 1px solid red;
+  transition: border 0.3s ease; /* ❌ border 会触发 layout + paint */
+}
+
+.bad-transition-font-size {
+  font-size: 16px;
+  transition: font-size 0.3s ease; /* ❌ font-size 会触发 layout */
+}
+
+/* 2. animation 使用低性能属性 */
+@keyframes bad-width-animation {
+  from {
+    width: 100px;
+  }
+
+  to {
+    width: 200px; /* ❌ width 会触发 layout */
+  }
+}
+
+@keyframes bad-margin-animation {
+  0% {
+    margin-left: 0;
+  }
+
+  100% {
+    margin-left: 100px; /* ❌ margin 会触发 layout */
+  }
+}
+
+.bad-animation {
+  animation: bad-width-animation 1s infinite;
+}
+
+/* 3. transition: all 也会报错（因为包含低性能属性） */
+.bad-transition-all {
+  transition: all 0.3s ease; /* ❌ all 包含所有属性 */
+}
+
+/* ✅ 以下是正确的高性能动画写法 */
+.good-transition-transform {
+  transition: transform 0.3s ease; /* ✅ transform 是高性能属性 */
+}
+
+.good-transition-opacity {
+  transition: opacity 0.3s ease; /* ✅ opacity 是高性能属性 */
+}
+
+.good-transition-background-color {
+  transition: background-color 0.3s ease; /* ✅ 在 ignoreProperties 中 */
+}
+
+@keyframes good-animation {
+  from {
+    opacity: 0;
+    transform: translateX(0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(100px); /* ✅ 使用 transform 代替 left/margin */
+  }
+}
