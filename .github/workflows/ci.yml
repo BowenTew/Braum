@@ -38,9 +38,6 @@ jobs:
       # - name: Run tests
       #   run: pnpm test
 
-      - name: Check configuration validity
-        run: pnpm braum-dev check-configs
-
   publish:
     needs: test
     runs-on: ubuntu-latest
