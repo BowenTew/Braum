@@ -246,7 +246,7 @@ pnpm ci-check
 
 ## 📄 开源协议
 
-本项目基于 [MIT License](./LICENSE) 开源协议。
+本项目基于 [Apache License 2.0](./LICENSE) 开源协议。
 
 ## 🏷️ 包标签说明
 
@@ -262,5 +262,5 @@ pnpm ci-check
 ---
 
 <p align="center">
-  <sub>用 ❤️ 由 Braum 团队构建</sub>
+  <sub>用 ❤️ 由 <a href="https://github.com/BowenTew">Bowen Tew</a> 构建</sub>
 </p>

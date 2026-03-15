@@ -246,7 +246,7 @@ We welcome all forms of contributions:
 
 ## 📄 License
 
-This project is licensed under the [MIT License](./LICENSE).
+This project is licensed under the [Apache License 2.0](./LICENSE).
 
 ## 🏷️ Package Tags
 
@@ -262,5 +262,5 @@ This project is licensed under the [MIT License](./LICENSE).
 ---
 
 <p align="center">
-  <sub>Built with ❤️ by the Braum Team</sub>
+  <sub>Built with ❤️ by <a href="https://github.com/BowenTew">Bowen Tew</a></sub>
 </p>
