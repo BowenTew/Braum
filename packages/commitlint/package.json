@@ -1,40 +1,38 @@
 {
-    "name": "@braum/commitlint",
-    "version": "1.0.0",
-    "description": "Commit management configuration from Braum (commitlint + commitizen + changelog + git-hooks)",
-    "main": "dist/index.cjs",
-    "module": "dist/index.mjs",
-    "types": "dist/index.d.mts",
-    "files": [
-      "dist"
-    ],
-    "keywords": [
-      "commitlint",
-      "commitizen",
-      "changelog",
-      "git-hooks",
-      "conventional-commits",
-      "braum"
-    ],
-    "author": "Braum Team",
-    "license": "MIT",
-    "scripts": {
-      "build": "tsdown"
-    },
-    "dependencies": {
-      "@commitlint/config-conventional": "^20.2.0",
-      "@commitlint/types": "^20.2.0"
-    },
-    "exports": {
-      ".": {
-        "require": "./dist/index.cjs",
-        "import": "./dist/index.mjs",
-        "default": "./dist/index.mjs"
-      }
-    },
-    "publishConfig": {
-      "access": "public"
+  "name": "@braum/commitlint",
+  "version": "1.0.0",
+  "description": "Commit management configuration from Braum (commitlint + commitizen + changelog + git-hooks)",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.mts",
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "commitlint",
+    "commitizen",
+    "changelog",
+    "git-hooks",
+    "conventional-commits",
+    "braum"
+  ],
+  "author": "Braum Team",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsdown"
+  },
+  "dependencies": {
+    "@commitlint/config-conventional": "^20.2.0",
+    "@commitlint/types": "^20.2.0"
+  },
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs",
+      "default": "./dist/index.mjs"
     }
+  },
+  "publishConfig": {
+    "access": "public"
   }
-  
-  
+}

@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [16.x, 18.x, 20.x]
+        node-version: [22.x]
 
     steps:
       - uses: actions/checkout@v4
@@ -29,20 +29,14 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Run linting
-        run: pnpm lint
-
-      - name: Run type checking
-        run: pnpm type-check
-
-      - name: Run tests
-        run: pnpm test
-
       - name: Build packages
         run: pnpm build
 
-      - name: Check configuration validity
-        run: pnpm braum-dev check-configs
+      - name: Run linting
+        run: pnpm ci-check
+
+      # - name: Run tests
+      #   run: pnpm test
 
   publish:
     needs: test

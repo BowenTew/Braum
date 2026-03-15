@@ -13,6 +13,6 @@
     { "path": "./examples/typescript/base-check" },
     { "path": "./examples/typescript/lib-check" },
     { "path": "./examples/typescript/web-check" },
-    { "path": "./examples/typescript/node-check" },
+    { "path": "./examples/typescript/node-check" }
   ]
 }

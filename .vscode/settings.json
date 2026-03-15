@@ -10,6 +10,16 @@
 
   // 在输入时就提示（而不仅仅是保存时）
   "eslint.run": "onType",
+
+  "stylelint.enable": true,
+  "stylelint.validate": [
+    "css",
+    "scss",
+    "less",
+    "vue",
+    "html"
+  ]
+
 }
 
 

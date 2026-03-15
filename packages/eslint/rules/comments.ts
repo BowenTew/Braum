@@ -1,4 +1,3 @@
-// @ts-expect-error CommentsPlugin is not a valid ESLint plugin
 import CommentsPlugin from '@eslint-community/eslint-plugin-eslint-comments'
 
 import { noop } from '../utils'
