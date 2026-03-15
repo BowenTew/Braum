@@ -3,3 +3,4 @@
 **/examples/**
 **/dist/**
 **/node_modules/**
+.changeset/**
