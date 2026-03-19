@@ -5,6 +5,8 @@ export default defineConfig({
   title: 'Braum',
   description: 'Frontend configuration toolkit monorepo',
   lang: 'en-US',
+  base: '/braum/',
+
 
   vite: {
     server: {
