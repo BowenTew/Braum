@@ -43,11 +43,11 @@ pnpm add -D @braum/eslint
 import { defineESLintConfig } from '@braum/eslint'
 
 const config = await defineESLintConfig({
-  enableReact: true,      // Enable React support
-  enableVue: false,       // Enable Vue support
+  enableReact: true, // Enable React support
+  enableVue: false, // Enable Vue support
   enableTypescript: true, // Enable TypeScript support
-  enableNode: true,       // Enable Node.js support
-  enablePrettier: true,   // Enable Prettier integration
+  enableNode: true, // Enable Node.js support
+  enablePrettier: true, // Enable Prettier integration
 })
 
 export default config
@@ -55,17 +55,17 @@ export default config
 
 **Options:**
 
-| Option | Type | Default | Description |
-|--------|------|---------|-------------|
-| `enableVue` | boolean | false | Enable Vue support |
-| `enableReact` | boolean | false | Enable React support |
-| `enableJSX` | boolean | false | Enable JSX support |
-| `enableNode` | boolean | false | Enable Node.js support |
-| `enableTypescript` | boolean | true | Enable TypeScript support |
-| `enablePrettier` | boolean | true | Enable Prettier integration |
-| `enableImports` | boolean | true | Enable import rules |
-| `enablePromise` | boolean | true | Enable promise rules |
-| `enableComments` | boolean | true | Enable ESLint comments rules |
+| Option             | Type    | Default | Description                  |
+| ------------------ | ------- | ------- | ---------------------------- |
+| `enableVue`        | boolean | false   | Enable Vue support           |
+| `enableReact`      | boolean | false   | Enable React support         |
+| `enableJSX`        | boolean | false   | Enable JSX support           |
+| `enableNode`       | boolean | false   | Enable Node.js support       |
+| `enableTypescript` | boolean | true    | Enable TypeScript support    |
+| `enablePrettier`   | boolean | true    | Enable Prettier integration  |
+| `enableImports`    | boolean | true    | Enable import rules          |
+| `enablePromise`    | boolean | true    | Enable promise rules         |
+| `enableComments`   | boolean | true    | Enable ESLint comments rules |
 
 ### @braum/prettier
 
@@ -82,8 +82,9 @@ pnpm add -D @braum/prettier
 import { definePrettierConfig } from '@braum/prettier'
 
 export default definePrettierConfig({
-  xml: true,              // Enable XML plugin
-  userOverrides: {        // Your custom overrides
+  xml: true, // Enable XML plugin
+  userOverrides: {
+    // Your custom overrides
     printWidth: 100,
   },
 })
@@ -104,9 +105,9 @@ pnpm add -D @braum/stylelint
 import { defineStylelintConfig } from '@braum/stylelint'
 
 export default defineStylelintConfig({
-  enableVue: false,              // Enable Vue SFC support
-  enableScss: true,              // Enable SCSS support
-  enableLess: false,             // Enable Less support
+  enableVue: false, // Enable Vue SFC support
+  enableScss: true, // Enable SCSS support
+  enableLess: false, // Enable Less support
   enableStyledComponents: false, // Enable styled-components support
 })
 ```
@@ -126,7 +127,7 @@ pnpm add -D @braum/commitlint
 import { defineCommitlintConfig } from '@braum/commitlint'
 
 export default defineCommitlintConfig({
-  extendConfig: (base) => ({
+  extendConfig: base => ({
     ...base,
     // Your custom rules
   }),
@@ -250,13 +251,13 @@ This project is licensed under the [Apache License 2.0](./LICENSE).
 
 ## 🏷️ Package Tags
 
-| Tag | Description |
-|-----|-------------|
-| `@braum/eslint` | ESLint configuration |
-| `@braum/prettier` | Prettier configuration |
-| `@braum/stylelint` | Stylelint configuration |
-| `@braum/commitlint` | Commitlint configuration |
-| `@braum/cz` | Commitizen CLI tool |
+| Tag                        | Description                      |
+| -------------------------- | -------------------------------- |
+| `@braum/eslint`            | ESLint configuration             |
+| `@braum/prettier`          | Prettier configuration           |
+| `@braum/stylelint`         | Stylelint configuration          |
+| `@braum/commitlint`        | Commitlint configuration         |
+| `@braum/cz`                | Commitizen CLI tool              |
 | `@braum/typescript-config` | TypeScript configuration presets |
 
 ---

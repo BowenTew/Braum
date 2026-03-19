@@ -43,11 +43,11 @@ pnpm add -D @braum/eslint
 import { defineESLintConfig } from '@braum/eslint'
 
 const config = await defineESLintConfig({
-  enableReact: true,      // 启用 React 支持
-  enableVue: false,       // 启用 Vue 支持
+  enableReact: true, // 启用 React 支持
+  enableVue: false, // 启用 Vue 支持
   enableTypescript: true, // 启用 TypeScript 支持
-  enableNode: true,       // 启用 Node.js 支持
-  enablePrettier: true,   // 启用 Prettier 集成
+  enableNode: true, // 启用 Node.js 支持
+  enablePrettier: true, // 启用 Prettier 集成
 })
 
 export default config
@@ -55,17 +55,17 @@ export default config
 
 **配置选项：**
 
-| 选项 | 类型 | 默认值 | 说明 |
-|------|------|--------|------|
-| `enableVue` | boolean | false | 启用 Vue 支持 |
-| `enableReact` | boolean | false | 启用 React 支持 |
-| `enableJSX` | boolean | false | 启用 JSX 支持 |
-| `enableNode` | boolean | false | 启用 Node.js 支持 |
-| `enableTypescript` | boolean | true | 启用 TypeScript 支持 |
-| `enablePrettier` | boolean | true | 启用 Prettier 集成 |
-| `enableImports` | boolean | true | 启用导入规则 |
-| `enablePromise` | boolean | true | 启用 Promise 规则 |
-| `enableComments` | boolean | true | 启用 ESLint 注释规则 |
+| 选项               | 类型    | 默认值 | 说明                 |
+| ------------------ | ------- | ------ | -------------------- |
+| `enableVue`        | boolean | false  | 启用 Vue 支持        |
+| `enableReact`      | boolean | false  | 启用 React 支持      |
+| `enableJSX`        | boolean | false  | 启用 JSX 支持        |
+| `enableNode`       | boolean | false  | 启用 Node.js 支持    |
+| `enableTypescript` | boolean | true   | 启用 TypeScript 支持 |
+| `enablePrettier`   | boolean | true   | 启用 Prettier 集成   |
+| `enableImports`    | boolean | true   | 启用导入规则         |
+| `enablePromise`    | boolean | true   | 启用 Promise 规则    |
+| `enableComments`   | boolean | true   | 启用 ESLint 注释规则 |
 
 ### @braum/prettier
 
@@ -82,8 +82,9 @@ pnpm add -D @braum/prettier
 import { definePrettierConfig } from '@braum/prettier'
 
 export default definePrettierConfig({
-  xml: true,              // 启用 XML 插件
-  userOverrides: {        // 自定义覆盖配置
+  xml: true, // 启用 XML 插件
+  userOverrides: {
+    // 自定义覆盖配置
     printWidth: 100,
   },
 })
@@ -104,9 +105,9 @@ pnpm add -D @braum/stylelint
 import { defineStylelintConfig } from '@braum/stylelint'
 
 export default defineStylelintConfig({
-  enableVue: false,              // 启用 Vue 单文件组件支持
-  enableScss: true,              // 启用 SCSS 支持
-  enableLess: false,             // 启用 Less 支持
+  enableVue: false, // 启用 Vue 单文件组件支持
+  enableScss: true, // 启用 SCSS 支持
+  enableLess: false, // 启用 Less 支持
   enableStyledComponents: false, // 启用 styled-components 支持
 })
 ```
@@ -126,7 +127,7 @@ pnpm add -D @braum/commitlint
 import { defineCommitlintConfig } from '@braum/commitlint'
 
 export default defineCommitlintConfig({
-  extendConfig: (base) => ({
+  extendConfig: base => ({
     ...base,
     // 自定义规则
   }),
@@ -250,14 +251,14 @@ pnpm ci-check
 
 ## 🏷️ 包标签说明
 
-| 标签 | 说明 |
-|------|------|
-| `@braum/eslint` | ESLint 配置 |
-| `@braum/prettier` | Prettier 配置 |
-| `@braum/stylelint` | Stylelint 配置 |
-| `@braum/commitlint` | Commitlint 配置 |
-| `@braum/cz` | Commitizen 命令行工具 |
-| `@braum/typescript-config` | TypeScript 配置预设 |
+| 标签                       | 说明                  |
+| -------------------------- | --------------------- |
+| `@braum/eslint`            | ESLint 配置           |
+| `@braum/prettier`          | Prettier 配置         |
+| `@braum/stylelint`         | Stylelint 配置        |
+| `@braum/commitlint`        | Commitlint 配置       |
+| `@braum/cz`                | Commitizen 命令行工具 |
+| `@braum/typescript-config` | TypeScript 配置预设   |
 
 ---
 
