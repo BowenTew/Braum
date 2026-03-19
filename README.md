@@ -1,97 +1,267 @@
-# TypeScript 严格配置验证 (ts-check)
+# Braum - Frontend Configuration Toolkit
 
-这个验证项目位于 `examples/ts-check/`，用于测试 TypeScript 严格配置的各项规则。
+## 📖 Introduction
 
-## 📁 文件结构
+Braum is a frontend configuration toolkit monorepo designed to collect and organize commonly used frontend development configurations. Through unified repository management, it provides teams with a standardized development experience and consistent, battle-tested configuration files for various development tools.
+
+## 🏗️ Project Structure
 
 ```
-ts-check/
-├── src/
-│   ├── 01-基础严格检查-good.ts    # 基础严格检查 - 正确示例
-│   ├── 01-基础严格检查-bad.ts     # 基础严格检查 - 错误示例
-│   ├── 02-代码质量检查-good.ts    # 代码质量检查 - 正确示例
-│   ├── 02-代码质量检查-bad.ts     # 代码质量检查 - 错误示例
-│   ├── 03-高级严格检查-good.ts    # 高级严格检查 - 正确示例
-│   ├── 03-高级严格检查-bad.ts     # 高级严格检查 - 错误示例
-│   ├── 04-模块解析-good.ts        # 模块解析 - 正确示例
-│   └── 04-模块解析-bad.ts         # 模块解析 - 错误示例
-├── package.json
-└── tsconfig.json                  # 包含所有严格配置的 TypeScript 配置
+braum/
+├── packages/                    # Core configuration packages
+│   ├── commitlint/              # @braum/commitlint - Commit message linting
+│   ├── eslint/                  # @braum/eslint - ESLint configuration
+│   ├── prettier/                # @braum/prettier - Prettier configuration
+│   ├── stylelint/               # @braum/stylelint - Stylelint configuration
+│   └── tsconfig/                # @braum/typescript-config - TypeScript presets
+├── tools/                       # Development tools
+│   └── cz/                      # @braum/cz - Commitizen CLI tool
+├── examples/                    # Example projects
+│   ├── eslint/                  # ESLint usage example
+│   ├── react/                   # React project example
+│   ├── stylelint/               # Stylelint usage example
+│   ├── typescript/              # TypeScript configuration examples
+│   └── vue/                     # Vue project example
+├── scripts/                     # Build and development scripts
+└── doc/                         # Documentation
 ```
 
-## 🎯 验证的配置规则
+## 📦 Packages
 
-### 🔒 基础严格检查
+### @braum/eslint
 
-- `strict`, `noImplicitAny`, `strictNullChecks`
-- `strictFunctionTypes`, `strictBindCallApply`
-- `strictPropertyInitialization`, `noImplicitThis`
-
-### 🚨 代码质量强制
-
-- `noUnusedLocals`, `noUnusedParameters`
-- `noImplicitReturns`, `noFallthroughCasesInSwitch`
-- `noImplicitOverride`
-
-### 🔍 高级严格检查
-
-- `noUncheckedIndexedAccess`, `exactOptionalPropertyTypes`
-- `allowUnusedLabels`, `allowUnreachableCode`
-
-### 📦 模块解析和互操作性
-
-- `allowSyntheticDefaultImports`, `esModuleInterop`
-- `verbatimModuleSyntax`, `resolveJsonModule`
-- `forceConsistentCasingInFileNames`
-
-## 🚀 使用方法
+ESLint configuration supporting JavaScript, TypeScript, React, and Vue.
 
 ```bash
-# 安装依赖
-pnpm install
-
-# 类型检查（会显示所有错误）
-pnpm type-check
-
-# 类型检查监控模式
-pnpm type-check:watch
-
-# 尝试编译（会失败，因为有故意设置的类型错误）
-pnpm build
+pnpm add -D @braum/eslint
 ```
 
-## 📊 预期结果
+**Usage:**
 
-### ✅ Good 文件
+```javascript
+// eslint.config.js
+import { defineESLintConfig } from '@braum/eslint'
 
-所有 `*-good.ts` 文件应该 **没有类型错误**，展示如何正确编写符合严格配置的代码。
+const config = await defineESLintConfig({
+  enableReact: true, // Enable React support
+  enableVue: false, // Enable Vue support
+  enableTypescript: true, // Enable TypeScript support
+  enableNode: true, // Enable Node.js support
+  enablePrettier: true, // Enable Prettier integration
+})
 
-### ❌ Bad 文件
+export default config
+```
 
-所有 `*-bad.ts` 文件应该 **有多个类型错误**，展示各种违反严格配置的情况。
+**Options:**
 
-## 💡 学习建议
+| Option             | Type    | Default | Description                  |
+| ------------------ | ------- | ------- | ---------------------------- |
+| `enableVue`        | boolean | false   | Enable Vue support           |
+| `enableReact`      | boolean | false   | Enable React support         |
+| `enableJSX`        | boolean | false   | Enable JSX support           |
+| `enableNode`       | boolean | false   | Enable Node.js support       |
+| `enableTypescript` | boolean | true    | Enable TypeScript support    |
+| `enablePrettier`   | boolean | true    | Enable Prettier integration  |
+| `enableImports`    | boolean | true    | Enable import rules          |
+| `enablePromise`    | boolean | true    | Enable promise rules         |
+| `enableComments`   | boolean | true    | Enable ESLint comments rules |
 
-1. **先看 good 文件**: 了解正确的写法
-2. **再运行 type-check**: 查看 bad 文件的错误信息
-3. **对比分析**: 理解每个规则的具体要求
-4. **逐步应用**: 在自己的项目中逐步启用这些严格配置
+### @braum/prettier
 
-## 🎓 规则分级
+Prettier configuration with XML plugin support.
 
-### 🔰 入门级（推荐全部启用）
+```bash
+pnpm add -D @braum/prettier
+```
 
-- 基础严格检查配置
-- 基本的代码质量规则
+**Usage:**
 
-### 📈 进阶级（推荐重要项目）
+```javascript
+// prettier.config.js
+import { definePrettierConfig } from '@braum/prettier'
 
-- 高级严格检查
-- 更严格的代码质量要求
+export default definePrettierConfig({
+  xml: true, // Enable XML plugin
+  userOverrides: {
+    // Your custom overrides
+    printWidth: 100,
+  },
+})
+```
 
-### 🛡️ 专家级（推荐 TypeScript 专家团队）
+### @braum/stylelint
 
-- 所有严格配置全开
-- 需要丰富的 TypeScript 经验
+Stylelint configuration for CSS, SCSS, Less, and styled-components.
 
-这个验证环境帮助你理解和掌握 TypeScript 的严格类型系统！
+```bash
+pnpm add -D @braum/stylelint
+```
+
+**Usage:**
+
+```javascript
+// stylelint.config.js
+import { defineStylelintConfig } from '@braum/stylelint'
+
+export default defineStylelintConfig({
+  enableVue: false, // Enable Vue SFC support
+  enableScss: true, // Enable SCSS support
+  enableLess: false, // Enable Less support
+  enableStyledComponents: false, // Enable styled-components support
+})
+```
+
+### @braum/commitlint
+
+Commitlint configuration with conventional commits support.
+
+```bash
+pnpm add -D @braum/commitlint
+```
+
+**Usage:**
+
+```javascript
+// commitlint.config.js
+import { defineCommitlintConfig } from '@braum/commitlint'
+
+export default defineCommitlintConfig({
+  extendConfig: base => ({
+    ...base,
+    // Your custom rules
+  }),
+})
+```
+
+**Default Types:** `feat`, `fix`, `docs`, `style`, `refactor`, `perf`, `test`, `build`, `ci`, `chore`, `revert`
+
+### @braum/cz
+
+Commitizen CLI tool for interactive commit messages.
+
+```bash
+pnpm add -D @braum/cz
+```
+
+**Usage:**
+
+Add to `package.json`:
+
+```json
+{
+  "scripts": {
+    "commit": "cz"
+  }
+}
+```
+
+Then run:
+
+```bash
+pnpm commit
+```
+
+### @braum/typescript-config
+
+TypeScript configuration presets.
+
+```bash
+pnpm add -D @braum/typescript-config
+```
+
+**Usage:**
+
+```json
+// tsconfig.json
+{
+  "extends": "@braum/typescript-config/tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "./dist"
+  }
+}
+```
+
+**Available Presets:**
+
+- `tsconfig.base.json` - Base strict configuration
+- `tsconfig.lib.json` - Library project configuration
+- `tsconfig.node.json` - Node.js project configuration
+- `tsconfig.web.json` - Web project configuration
+
+## 🛠️ Development Guide
+
+### Requirements
+
+- Node.js >= 18.0.0
+- pnpm >= 8.0.0
+
+### Installation
+
+```bash
+# Install dependencies
+pnpm install
+
+# Build all packages
+pnpm build
+
+# Run type checking
+pnpm type-check
+
+# Run linting
+pnpm lint:check
+
+# Run formatting check
+pnpm format:check
+
+# CI check (format + lint + type-check)
+pnpm ci-check
+```
+
+### Development Workflow
+
+1. **Fork** the repository and create a new branch
+2. **Install** dependencies with `pnpm install`
+3. **Develop** in the corresponding packages directory
+4. **Build** with `pnpm build`
+5. **Commit** following conventional commit format
+6. **Create PR** for code review
+
+## 📝 Contributing
+
+We welcome all forms of contributions:
+
+- 🐛 **Bug Reports** - Help us find configuration issues
+- 💡 **Configuration Suggestions** - Share your configuration improvements
+- 🔧 **Code Contributions** - Participate directly in development
+- 📖 **Documentation Improvements** - Improve usage documentation
+
+## 🎯 Design Principles
+
+- **Modular** - Each configuration is an independent package that can be used separately
+- **Configurable** - Provide flexible configuration options to adapt to different project needs
+- **Battle-tested** - All configurations have been tested in real projects
+- **Framework-agnostic** - Applicable to any frontend framework or vanilla JavaScript
+- **Type-safe** - Prioritize TypeScript with complete type definitions
+- **Backward Compatible** - Follow semantic versioning for smooth upgrades
+
+## 📄 License
+
+This project is licensed under the [Apache License 2.0](./LICENSE).
+
+## 🏷️ Package Tags
+
+| Tag                        | Description                      |
+| -------------------------- | -------------------------------- |
+| `@braum/eslint`            | ESLint configuration             |
+| `@braum/prettier`          | Prettier configuration           |
+| `@braum/stylelint`         | Stylelint configuration          |
+| `@braum/commitlint`        | Commitlint configuration         |
+| `@braum/cz`                | Commitizen CLI tool              |
+| `@braum/typescript-config` | TypeScript configuration presets |
+
+---
+
+<p align="center">
+  <sub>Built with ❤️ by <a href="https://github.com/BowenTew">Bowen Tew</a></sub>
+</p>

@@ -13,7 +13,11 @@
     "format:fix": "prettier --write .",
     "ci-check": "pnpm format:check && pnpm lint:check && pnpm type-check",
     "build": "npx tsx scripts/build.ts",
-    "clean": "npx tsx scripts/clean.ts"
+    "clean": "npx tsx scripts/clean.ts",
+    "docs:dev": "vitepress dev doc",
+    "docs:build": "vitepress build doc",
+    "docs:preview": "vitepress preview doc",
+    "test": "vitest run ."
   },
   "devDependencies": {
     "@braum/commitlint": "workspace:*",
@@ -28,6 +32,7 @@
     "prettier": "^3.7.1",
     "tsdown": "0.17.0-beta.5",
     "typescript": "^5.0.0",
+    "vitepress": "^1.0.0",
     "vitest": "^4.0.16"
   }
 }
