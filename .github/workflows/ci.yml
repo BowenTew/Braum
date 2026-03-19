@@ -6,28 +6,31 @@ on:
   pull_request:
     branches: [main, develop]
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
 jobs:
   test:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [22.x]
-
     steps:
       - uses: actions/checkout@v4
 
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v4
-        with:
-          node-version: ${{ matrix.node-version }}
-
-      - name: Install pnpm
-        uses: pnpm/action-setup@v2
+      - uses: pnpm/action-setup@v2
         with:
           version: 8
 
-      - name: Install dependencies
-        run: pnpm install
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - run: pnpm install
 
       - name: Build packages
         run: pnpm build
@@ -38,41 +41,32 @@ jobs:
       # - name: Run tests
       #   run: pnpm test
 
-  publish:
+  deploy-docs:
     needs: test
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
-      - name: Use Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '18'
-          registry-url: 'https://registry.npmjs.org'
-
-      - name: Install pnpm
-        uses: pnpm/action-setup@v2
+      - uses: pnpm/action-setup@v2
         with:
           version: 8
 
-      - name: Install dependencies
-        run: pnpm install
-
-      - name: Build packages
-        run: pnpm build
-
-      - name: Create Release Pull Request or Publish to npm
-        id: changesets
-        uses: changesets/action@v1
+      - uses: actions/setup-node@v4
         with:
-          version: pnpm version-packages
-          publish: pnpm release
-          title: 'chore: release packages'
-          commit: 'chore: release packages'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          node-version: 22
+          cache: pnpm
+
+      - run: pnpm install
+
+      - run: pnpm docs:build
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: doc/.vitepress/dist
+
+      - id: deployment
+        uses: actions/deploy-pages@v4
