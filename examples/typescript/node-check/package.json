@@ -1,8 +1,8 @@
 {
-  "name": "@pixelastic-ai-examples/node-check",
+  "name": "@fetuye-examples/node-check",
   "private": true,
   "version": "1.0.0",
-  "description": "Example project for @pixelastic-ai/typescript-config/tsconfig.node.json",
+  "description": "Example project for @fetuye/typescript-config/tsconfig.node.json",
   "main": "dist/index.js",
   "scripts": {
     "ts-check": "tsc --noEmit",
@@ -13,7 +13,7 @@
   "license": "ISC",
   "packageManager": "pnpm@10.15.0",
   "devDependencies": {
-    "@pixelastic-ai/typescript-config": "workspace:*",
+    "@fetuye/typescript-config": "workspace:*",
     "@types/node": "^24.10.1",
     "typescript": "^5.9.3"
   }

@@ -1,5 +1,5 @@
 {
-  "name": "@pixelastic-ai/commitlint",
+  "name": "@fetuye/commitlint",
   "version": "1.0.0",
   "description": "Commit management configuration from Braum (commitlint + commitizen + changelog + git-hooks)",
   "main": "dist/index.cjs",

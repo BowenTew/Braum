@@ -1,11 +1,11 @@
-# @pixelastic-ai/eslint
+# @fetuye/eslint
 
 ESLint configuration supporting JavaScript, TypeScript, React, Vue, and Node.js with flat config format.
 
 ## Installation
 
 ```bash
-pnpm add -D @pixelastic-ai/eslint
+pnpm add -D @fetuye/eslint
 ```
 
 ## Quick Start
@@ -13,7 +13,7 @@ pnpm add -D @pixelastic-ai/eslint
 Create `eslint.config.js`:
 
 ```javascript
-import { defineESLintConfig } from '@pixelastic-ai/eslint'
+import { defineESLintConfig } from '@fetuye/eslint'
 
 export default await defineESLintConfig({
   enableTypescript: true,
@@ -41,7 +41,7 @@ export default await defineESLintConfig({
 ### React
 
 ```javascript
-import { defineESLintConfig } from '@pixelastic-ai/eslint'
+import { defineESLintConfig } from '@fetuye/eslint'
 
 export default await defineESLintConfig({
   enableReact: true,
@@ -53,7 +53,7 @@ export default await defineESLintConfig({
 ### Vue
 
 ```javascript
-import { defineESLintConfig } from '@pixelastic-ai/eslint'
+import { defineESLintConfig } from '@fetuye/eslint'
 
 export default await defineESLintConfig({
   enableVue: true,
@@ -65,7 +65,7 @@ export default await defineESLintConfig({
 ### Node.js
 
 ```javascript
-import { defineESLintConfig } from '@pixelastic-ai/eslint'
+import { defineESLintConfig } from '@fetuye/eslint'
 
 export default await defineESLintConfig({
   enableNode: true,
@@ -78,7 +78,7 @@ export default await defineESLintConfig({
 You can extend any rule set using the `overrides` option:
 
 ```javascript
-import { defineESLintConfig } from '@pixelastic-ai/eslint'
+import { defineESLintConfig } from '@fetuye/eslint'
 
 export default await defineESLintConfig({
   enableTypescript: true,
@@ -127,7 +127,7 @@ Add to `package.json`:
 Create `.eslintignore` or use the `ignores` option in your config:
 
 ```javascript
-import { defineESLintConfig } from '@pixelastic-ai/eslint'
+import { defineESLintConfig } from '@fetuye/eslint'
 
 const config = await defineESLintConfig({
   enableTypescript: true,

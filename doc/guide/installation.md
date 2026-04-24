@@ -7,13 +7,13 @@ This guide will help you install and configure Braum packages in your project.
 ### ESLint
 
 ```bash
-pnpm add -D @pixelastic-ai/eslint
+pnpm add -D @fetuye/eslint
 ```
 
 Create `eslint.config.js`:
 
 ```javascript
-import { defineESLintConfig } from '@pixelastic-ai/eslint'
+import { defineESLintConfig } from '@fetuye/eslint'
 
 export default await defineESLintConfig({
   enableTypescript: true,
@@ -24,13 +24,13 @@ export default await defineESLintConfig({
 ### Prettier
 
 ```bash
-pnpm add -D @pixelastic-ai/prettier
+pnpm add -D @fetuye/prettier
 ```
 
 Create `prettier.config.js`:
 
 ```javascript
-import { definePrettierConfig } from '@pixelastic-ai/prettier'
+import { definePrettierConfig } from '@fetuye/prettier'
 
 export default definePrettierConfig({
   xml: true,
@@ -40,13 +40,13 @@ export default definePrettierConfig({
 ### Stylelint
 
 ```bash
-pnpm add -D @pixelastic-ai/stylelint
+pnpm add -D @fetuye/stylelint
 ```
 
 Create `stylelint.config.js`:
 
 ```javascript
-import { defineStylelintConfig } from '@pixelastic-ai/stylelint'
+import { defineStylelintConfig } from '@fetuye/stylelint'
 
 export default defineStylelintConfig({
   enableScss: true,
@@ -56,13 +56,13 @@ export default defineStylelintConfig({
 ### Commitlint
 
 ```bash
-pnpm add -D @pixelastic-ai/commitlint
+pnpm add -D @fetuye/commitlint
 ```
 
 Create `commitlint.config.js`:
 
 ```javascript
-import { defineCommitlintConfig } from '@pixelastic-ai/commitlint'
+import { defineCommitlintConfig } from '@fetuye/commitlint'
 
 export default defineCommitlintConfig()
 ```
@@ -70,7 +70,7 @@ export default defineCommitlintConfig()
 ### Commitizen
 
 ```bash
-pnpm add -D @pixelastic-ai/cz
+pnpm add -D @fetuye/cz
 ```
 
 Add to `package.json`:
@@ -86,14 +86,14 @@ Add to `package.json`:
 ### TypeScript Config
 
 ```bash
-pnpm add -D @pixelastic-ai/typescript-config
+pnpm add -D @fetuye/typescript-config
 ```
 
 Create `tsconfig.json`:
 
 ```json
 {
-  "extends": "@pixelastic-ai/typescript-config/tsconfig.web.json",
+  "extends": "@fetuye/typescript-config/tsconfig.web.json",
   "compilerOptions": {
     "outDir": "./dist"
   }

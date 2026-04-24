@@ -1,11 +1,11 @@
-# @pixelastic-ai/cz
+# @fetuye/cz
 
 Commitizen CLI tool for interactive commit message creation with emoji support.
 
 ## Installation
 
 ```bash
-pnpm add -D @pixelastic-ai/cz
+pnpm add -D @fetuye/cz
 ```
 
 ## Quick Start

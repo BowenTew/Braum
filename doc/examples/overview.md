@@ -6,11 +6,11 @@ Braum includes several example projects demonstrating how to use the packages in
 
 | Example | Description | Packages Used |
 |---------|-------------|---------------|
-| [ESLint](./eslint) | Basic ESLint setup | `@pixelastic-ai/eslint`, `@pixelastic-ai/prettier` |
-| [React](./react) | React + Vite project | `@pixelastic-ai/eslint` |
-| [Vue](./vue) | Vue 3 + Vite project | `@pixelastic-ai/eslint`, `@pixelastic-ai/prettier`, `@pixelastic-ai/typescript-config` |
-| [TypeScript](./typescript) | TypeScript configuration demos | `@pixelastic-ai/typescript-config` |
-| [Stylelint](./stylelint) | CSS/SCSS linting setup | `@pixelastic-ai/stylelint` |
+| [ESLint](./eslint) | Basic ESLint setup | `@fetuye/eslint`, `@fetuye/prettier` |
+| [React](./react) | React + Vite project | `@fetuye/eslint` |
+| [Vue](./vue) | Vue 3 + Vite project | `@fetuye/eslint`, `@fetuye/prettier`, `@fetuye/typescript-config` |
+| [TypeScript](./typescript) | TypeScript configuration demos | `@fetuye/typescript-config` |
+| [Stylelint](./stylelint) | CSS/SCSS linting setup | `@fetuye/stylelint` |
 
 ## Running Examples
 

@@ -1,4 +1,4 @@
-import { defineESLintConfig } from '@pixelastic-ai/eslint'
+import { defineESLintConfig } from '@fetuye/eslint'
 
 const config = await defineESLintConfig({
   enableJSX: true,

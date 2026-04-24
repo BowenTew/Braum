@@ -17,19 +17,19 @@ importers:
       '@commitlint/cli':
         specifier: ^19.8.1
         version: 19.8.1(@types/node@24.10.1)(typescript@5.9.3)
-      '@pixelastic-ai/commitlint':
+      '@fetuye/commitlint':
         specifier: workspace:*
         version: link:packages/commitlint
-      '@pixelastic-ai/cz':
+      '@fetuye/cz':
         specifier: workspace:*
         version: link:tools/cz
-      '@pixelastic-ai/eslint':
+      '@fetuye/eslint':
         specifier: workspace:*
         version: link:packages/eslint
-      '@pixelastic-ai/prettier':
+      '@fetuye/prettier':
         specifier: workspace:*
         version: link:packages/prettier
-      '@pixelastic-ai/typescript-config':
+      '@fetuye/typescript-config':
         specifier: workspace:*
         version: link:packages/tsconfig
       '@types/node':
@@ -59,10 +59,10 @@ importers:
 
   examples/eslint:
     dependencies:
-      '@pixelastic-ai/eslint':
+      '@fetuye/eslint':
         specifier: workspace:*
         version: link:../../packages/eslint
-      '@pixelastic-ai/prettier':
+      '@fetuye/prettier':
         specifier: workspace:*
         version: link:../../packages/prettier
     devDependencies:
@@ -82,7 +82,7 @@ importers:
       '@eslint/js':
         specifier: ^9.39.1
         version: 9.39.1
-      '@pixelastic-ai/eslint':
+      '@fetuye/eslint':
         specifier: workspace:*
         version: link:../../packages/eslint
       '@types/react':
@@ -115,7 +115,7 @@ importers:
 
   examples/stylelint:
     dependencies:
-      '@pixelastic-ai/stylelint':
+      '@fetuye/stylelint':
         specifier: workspace:*
         version: link:../../packages/stylelint
     devDependencies:
@@ -125,7 +125,7 @@ importers:
 
   examples/typescript/base-check:
     devDependencies:
-      '@pixelastic-ai/prettier':
+      '@fetuye/prettier':
         specifier: workspace:*
         version: link:../../../packages/prettier
       typescript:
@@ -134,7 +134,7 @@ importers:
 
   examples/typescript/lib-check:
     devDependencies:
-      '@pixelastic-ai/typescript-config':
+      '@fetuye/typescript-config':
         specifier: workspace:*
         version: link:../../../packages/tsconfig
       typescript:
@@ -143,7 +143,7 @@ importers:
 
   examples/typescript/node-check:
     devDependencies:
-      '@pixelastic-ai/typescript-config':
+      '@fetuye/typescript-config':
         specifier: workspace:*
         version: link:../../../packages/tsconfig
       '@types/node':
@@ -155,7 +155,7 @@ importers:
 
   examples/typescript/web-check:
     devDependencies:
-      '@pixelastic-ai/typescript-config':
+      '@fetuye/typescript-config':
         specifier: workspace:*
         version: link:../../../packages/tsconfig
       '@types/react':
@@ -174,13 +174,13 @@ importers:
         specifier: ^3.5.24
         version: 3.5.25(typescript@5.9.3)
     devDependencies:
-      '@pixelastic-ai/eslint':
+      '@fetuye/eslint':
         specifier: workspace:*
         version: link:../../packages/eslint
-      '@pixelastic-ai/prettier':
+      '@fetuye/prettier':
         specifier: workspace:*
         version: link:../../packages/prettier
-      '@pixelastic-ai/typescript-config':
+      '@fetuye/typescript-config':
         specifier: workspace:*
         version: link:../../packages/tsconfig
       '@vitejs/plugin-vue':

@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# 只允许通过 pnpm cz 提交
+# 如果 CZ_TYPE 环境变量未设置，则阻止普通 git commit
+
+if [ -z "$CZ_TYPE" ]; then
+  echo "❌ 请使用 pnpm cz 或 pnpm commit 进行提交"
+  echo "   普通 git commit 已被禁用"
+  exit 1
+fi

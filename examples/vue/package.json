@@ -1,5 +1,5 @@
 {
-  "name": "@pixelastic-ai-examples/vue",
+  "name": "@fetuye-examples/vue",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -16,9 +16,9 @@
     "vue": "^3.5.24"
   },
   "devDependencies": {
-    "@pixelastic-ai/eslint": "workspace:*",
-    "@pixelastic-ai/prettier": "workspace:*",
-    "@pixelastic-ai/typescript-config": "workspace:*",
+    "@fetuye/eslint": "workspace:*",
+    "@fetuye/prettier": "workspace:*",
+    "@fetuye/typescript-config": "workspace:*",
     "@vitejs/plugin-vue": "^6.0.1",
     "eslint": "^9.39.1",
     "prettier": "^3.7.1",

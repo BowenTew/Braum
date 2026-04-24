@@ -11,14 +11,14 @@
   "baseBranch": "main",
   "updateInternalDependencies": "patch",
   "ignore": [
-    "@pixelastic-ai/typescript-config",
-    "@pixelastic-ai-examples/base-check",
-    "@pixelastic-ai-examples/lib-check",
-    "@pixelastic-ai-examples/node-check",
-    "@pixelastic-ai-examples/web-check",
-    "@pixelastic-ai-examples/eslint",
-    "@pixelastic-ai-examples/react",
-    "@pixelastic-ai-examples/stylelint",
-    "@pixelastic-ai-examples/vue"
+    "@fetuye/typescript-config",
+    "@fetuye-examples/base-check",
+    "@fetuye-examples/lib-check",
+    "@fetuye-examples/node-check",
+    "@fetuye-examples/web-check",
+    "@fetuye-examples/eslint",
+    "@fetuye-examples/react",
+    "@fetuye-examples/stylelint",
+    "@fetuye-examples/vue"
   ]
 }

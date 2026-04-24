@@ -1,5 +1,5 @@
 {
-  "name": "@pixelastic-ai-examples/lib-check",
+  "name": "@fetuye-examples/lib-check",
   "private": true,
   "version": "1.0.0",
   "description": "",
@@ -13,7 +13,7 @@
   "license": "ISC",
   "packageManager": "pnpm@10.15.0",
   "devDependencies": {
-    "@pixelastic-ai/typescript-config": "workspace:*",
+    "@fetuye/typescript-config": "workspace:*",
     "typescript": "^5.9.3"
   }
 }

@@ -114,7 +114,7 @@ cd packages/my-package
 
 ```json
 {
-  "name": "@pixelastic-ai/my-package",
+  "name": "@fetuye/my-package",
   "version": "1.0.0",
   "description": "My package description",
   "main": "dist/index.cjs",

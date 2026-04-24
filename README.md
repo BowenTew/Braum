@@ -9,13 +9,13 @@ Braum is a frontend configuration toolkit monorepo designed to collect and organ
 ```
 braum/
 ├── packages/                    # Core configuration packages
-│   ├── commitlint/              # @pixelastic-ai/commitlint - Commit message linting
-│   ├── eslint/                  # @pixelastic-ai/eslint - ESLint configuration
-│   ├── prettier/                # @pixelastic-ai/prettier - Prettier configuration
-│   ├── stylelint/               # @pixelastic-ai/stylelint - Stylelint configuration
-│   └── tsconfig/                # @pixelastic-ai/typescript-config - TypeScript presets
+│   ├── commitlint/              # @fetuye/commitlint - Commit message linting
+│   ├── eslint/                  # @fetuye/eslint - ESLint configuration
+│   ├── prettier/                # @fetuye/prettier - Prettier configuration
+│   ├── stylelint/               # @fetuye/stylelint - Stylelint configuration
+│   └── tsconfig/                # @fetuye/typescript-config - TypeScript presets
 ├── tools/                       # Development tools
-│   └── cz/                      # @pixelastic-ai/cz - Commitizen CLI tool
+│   └── cz/                      # @fetuye/cz - Commitizen CLI tool
 ├── examples/                    # Example projects
 │   ├── eslint/                  # ESLint usage example
 │   ├── react/                   # React project example
@@ -28,19 +28,19 @@ braum/
 
 ## 📦 Packages
 
-### @pixelastic-ai/eslint
+### @fetuye/eslint
 
 ESLint configuration supporting JavaScript, TypeScript, React, and Vue.
 
 ```bash
-pnpm add -D @pixelastic-ai/eslint
+pnpm add -D @fetuye/eslint
 ```
 
 **Usage:**
 
 ```javascript
 // eslint.config.js
-import { defineESLintConfig } from '@pixelastic-ai/eslint'
+import { defineESLintConfig } from '@fetuye/eslint'
 
 const config = await defineESLintConfig({
   enableReact: true, // Enable React support
@@ -67,19 +67,19 @@ export default config
 | `enablePromise`    | boolean | true    | Enable promise rules         |
 | `enableComments`   | boolean | true    | Enable ESLint comments rules |
 
-### @pixelastic-ai/prettier
+### @fetuye/prettier
 
 Prettier configuration with XML plugin support.
 
 ```bash
-pnpm add -D @pixelastic-ai/prettier
+pnpm add -D @fetuye/prettier
 ```
 
 **Usage:**
 
 ```javascript
 // prettier.config.js
-import { definePrettierConfig } from '@pixelastic-ai/prettier'
+import { definePrettierConfig } from '@fetuye/prettier'
 
 export default definePrettierConfig({
   xml: true, // Enable XML plugin
@@ -90,19 +90,19 @@ export default definePrettierConfig({
 })
 ```
 
-### @pixelastic-ai/stylelint
+### @fetuye/stylelint
 
 Stylelint configuration for CSS, SCSS, Less, and styled-components.
 
 ```bash
-pnpm add -D @pixelastic-ai/stylelint
+pnpm add -D @fetuye/stylelint
 ```
 
 **Usage:**
 
 ```javascript
 // stylelint.config.js
-import { defineStylelintConfig } from '@pixelastic-ai/stylelint'
+import { defineStylelintConfig } from '@fetuye/stylelint'
 
 export default defineStylelintConfig({
   enableVue: false, // Enable Vue SFC support
@@ -112,19 +112,19 @@ export default defineStylelintConfig({
 })
 ```
 
-### @pixelastic-ai/commitlint
+### @fetuye/commitlint
 
 Commitlint configuration with conventional commits support.
 
 ```bash
-pnpm add -D @pixelastic-ai/commitlint
+pnpm add -D @fetuye/commitlint
 ```
 
 **Usage:**
 
 ```javascript
 // commitlint.config.js
-import { defineCommitlintConfig } from '@pixelastic-ai/commitlint'
+import { defineCommitlintConfig } from '@fetuye/commitlint'
 
 export default defineCommitlintConfig({
   extendConfig: base => ({
@@ -136,12 +136,12 @@ export default defineCommitlintConfig({
 
 **Default Types:** `feat`, `fix`, `docs`, `style`, `refactor`, `perf`, `test`, `build`, `ci`, `chore`, `revert`
 
-### @pixelastic-ai/cz
+### @fetuye/cz
 
 Commitizen CLI tool for interactive commit messages.
 
 ```bash
-pnpm add -D @pixelastic-ai/cz
+pnpm add -D @fetuye/cz
 ```
 
 **Usage:**
@@ -162,12 +162,12 @@ Then run:
 pnpm commit
 ```
 
-### @pixelastic-ai/typescript-config
+### @fetuye/typescript-config
 
 TypeScript configuration presets.
 
 ```bash
-pnpm add -D @pixelastic-ai/typescript-config
+pnpm add -D @fetuye/typescript-config
 ```
 
 **Usage:**
@@ -175,7 +175,7 @@ pnpm add -D @pixelastic-ai/typescript-config
 ```json
 // tsconfig.json
 {
-  "extends": "@pixelastic-ai/typescript-config/tsconfig.base.json",
+  "extends": "@fetuye/typescript-config/tsconfig.base.json",
   "compilerOptions": {
     "outDir": "./dist"
   }
@@ -253,12 +253,12 @@ This project is licensed under the [Apache License 2.0](./LICENSE).
 
 | Tag                        | Description                      |
 | -------------------------- | -------------------------------- |
-| `@pixelastic-ai/eslint`            | ESLint configuration             |
-| `@pixelastic-ai/prettier`          | Prettier configuration           |
-| `@pixelastic-ai/stylelint`         | Stylelint configuration          |
-| `@pixelastic-ai/commitlint`        | Commitlint configuration         |
-| `@pixelastic-ai/cz`                | Commitizen CLI tool              |
-| `@pixelastic-ai/typescript-config` | TypeScript configuration presets |
+| `@fetuye/eslint`            | ESLint configuration             |
+| `@fetuye/prettier`          | Prettier configuration           |
+| `@fetuye/stylelint`         | Stylelint configuration          |
+| `@fetuye/commitlint`        | Commitlint configuration         |
+| `@fetuye/cz`                | Commitizen CLI tool              |
+| `@fetuye/typescript-config` | TypeScript configuration presets |
 
 ---
 

@@ -1,5 +1,5 @@
 {
-  "extends": "@pixelastic-ai/typescript-config/tsconfig.node.json",
+  "extends": "@fetuye/typescript-config/tsconfig.node.json",
   "compilerOptions": {
     "rootDir": "./src",
     "outDir": "./dist",

@@ -1,5 +1,5 @@
 {
-  "extends": "@pixelastic-ai/typescript-config/tsconfig.base.json",
+  "extends": "@fetuye/typescript-config/tsconfig.base.json",
   "compilerOptions": {
     "composite": true
   },

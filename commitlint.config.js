@@ -1,3 +1,3 @@
-import { defineCommitlintConfig } from '@pixelastic-ai/commitlint'
+import { defineCommitlintConfig } from '@fetuye/commitlint'
 
 export default defineCommitlintConfig()

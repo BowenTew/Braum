@@ -1,11 +1,11 @@
-# @pixelastic-ai/typescript-config
+# @fetuye/typescript-config
 
 TypeScript configuration presets for strict type checking.
 
 ## Installation
 
 ```bash
-pnpm add -D @pixelastic-ai/typescript-config
+pnpm add -D @fetuye/typescript-config
 ```
 
 ## Available Presets
@@ -23,7 +23,7 @@ pnpm add -D @pixelastic-ai/typescript-config
 
 ```json
 {
-  "extends": "@pixelastic-ai/typescript-config/tsconfig.web.json",
+  "extends": "@fetuye/typescript-config/tsconfig.web.json",
   "compilerOptions": {
     "outDir": "./dist"
   }
@@ -34,7 +34,7 @@ pnpm add -D @pixelastic-ai/typescript-config
 
 ```json
 {
-  "extends": "@pixelastic-ai/typescript-config/tsconfig.node.json",
+  "extends": "@fetuye/typescript-config/tsconfig.node.json",
   "compilerOptions": {
     "outDir": "./dist"
   }
@@ -45,7 +45,7 @@ pnpm add -D @pixelastic-ai/typescript-config
 
 ```json
 {
-  "extends": "@pixelastic-ai/typescript-config/tsconfig.lib.json",
+  "extends": "@fetuye/typescript-config/tsconfig.lib.json",
   "compilerOptions": {
     "outDir": "./dist"
   }
@@ -141,7 +141,7 @@ You can extend and override the presets:
 
 ```json
 {
-  "extends": "@pixelastic-ai/typescript-config/tsconfig.web.json",
+  "extends": "@fetuye/typescript-config/tsconfig.web.json",
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
@@ -159,7 +159,7 @@ For monorepos, use project references:
 
 ```json
 {
-  "extends": "@pixelastic-ai/typescript-config/tsconfig.base.json",
+  "extends": "@fetuye/typescript-config/tsconfig.base.json",
   "compilerOptions": {
     "composite": true
   },

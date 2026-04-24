@@ -1,5 +1,5 @@
 {
-  "name": "@pixelastic-ai/typescript-config",
+  "name": "@fetuye/typescript-config",
   "version": "1.0.0",
   "description": "TypeScript configuration presets for Braum projects",
   "private": true,

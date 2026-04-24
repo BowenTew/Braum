@@ -1,5 +1,5 @@
 {
-  "name": "@pixelastic-ai/prettier",
+  "name": "@fetuye/prettier",
   "version": "1.0.0",
   "description": "Base Prettier configuration from Braum",
   "main": "dist/index.cjs",

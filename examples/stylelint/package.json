@@ -1,5 +1,5 @@
 {
-  "name": "@pixelastic-ai-examples/stylelint",
+  "name": "@fetuye-examples/stylelint",
   "private": true,
   "version": "1.0.0",
   "description": "",
@@ -11,7 +11,7 @@
   "license": "ISC",
   "packageManager": "pnpm@10.15.0",
   "dependencies": {
-    "@pixelastic-ai/stylelint": "workspace:*"
+    "@fetuye/stylelint": "workspace:*"
   },
   "devDependencies": {
     "stylelint": "^16.12.0"

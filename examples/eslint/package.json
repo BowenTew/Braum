@@ -1,5 +1,5 @@
 {
-  "name": "@pixelastic-ai-examples/eslint",
+  "name": "@fetuye-examples/eslint",
   "private": true,
   "version": "1.0.0",
   "description": "",
@@ -12,8 +12,8 @@
   "license": "ISC",
   "packageManager": "pnpm@10.15.0",
   "dependencies": {
-    "@pixelastic-ai/eslint": "workspace:*",
-    "@pixelastic-ai/prettier": "workspace:*"
+    "@fetuye/eslint": "workspace:*",
+    "@fetuye/prettier": "workspace:*"
   },
   "devDependencies": {
     "eslint": "^9.10.0"

@@ -1,5 +1,5 @@
 {
-  "name": "@pixelastic-ai/eslint",
+  "name": "@fetuye/eslint",
   "version": "1.0.0",
   "description": "ESLint configuration from Braum",
   "main": "dist/index.cjs",

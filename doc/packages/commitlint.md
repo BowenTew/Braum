@@ -1,11 +1,11 @@
-# @pixelastic-ai/commitlint
+# @fetuye/commitlint
 
 Commitlint configuration with conventional commits support and emoji prefixes.
 
 ## Installation
 
 ```bash
-pnpm add -D @pixelastic-ai/commitlint
+pnpm add -D @fetuye/commitlint
 ```
 
 ## Quick Start
@@ -13,7 +13,7 @@ pnpm add -D @pixelastic-ai/commitlint
 Create `commitlint.config.js`:
 
 ```javascript
-import { defineCommitlintConfig } from '@pixelastic-ai/commitlint'
+import { defineCommitlintConfig } from '@fetuye/commitlint'
 
 export default defineCommitlintConfig()
 ```
@@ -45,7 +45,7 @@ export default defineCommitlintConfig()
 ### Basic Usage
 
 ```javascript
-import { defineCommitlintConfig } from '@pixelastic-ai/commitlint'
+import { defineCommitlintConfig } from '@fetuye/commitlint'
 
 export default defineCommitlintConfig()
 ```
@@ -53,7 +53,7 @@ export default defineCommitlintConfig()
 ### Custom Types
 
 ```javascript
-import { defineCommitlintConfig } from '@pixelastic-ai/commitlint'
+import { defineCommitlintConfig } from '@fetuye/commitlint'
 
 export default defineCommitlintConfig({
   extendConfig: (base) => ({
@@ -69,7 +69,7 @@ export default defineCommitlintConfig({
 ### Custom Rules
 
 ```javascript
-import { defineCommitlintConfig } from '@pixelastic-ai/commitlint'
+import { defineCommitlintConfig } from '@fetuye/commitlint'
 
 export default defineCommitlintConfig({
   extendConfig: (base) => ({

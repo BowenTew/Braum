@@ -1,5 +1,5 @@
 {
-  "name": "@pixelastic-ai-examples/base-check",
+  "name": "@fetuye-examples/base-check",
   "private": true,
   "version": "1.0.0",
   "description": "",
@@ -12,7 +12,7 @@
   "license": "ISC",
   "packageManager": "pnpm@10.15.0",
   "devDependencies": {
-    "@pixelastic-ai/prettier": "workspace:*",
+    "@fetuye/prettier": "workspace:*",
     "typescript": "^5.9.3"
   }
 }

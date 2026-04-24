@@ -21,7 +21,7 @@ describe('utils', () => {
     fs.writeFileSync(
       path.join(testDir, 'pkg-a', 'package.json'),
       JSON.stringify({
-        name: '@pixelastic-ai/pkg-a',
+        name: '@fetuye/pkg-a',
         version: '1.0.0',
         scripts: { build: 'echo build' },
       }),
@@ -32,7 +32,7 @@ describe('utils', () => {
     fs.writeFileSync(
       path.join(testDir, 'pkg-b', 'package.json'),
       JSON.stringify({
-        name: '@pixelastic-ai/pkg-b',
+        name: '@fetuye/pkg-b',
         version: '2.0.0',
       }),
     )
@@ -42,7 +42,7 @@ describe('utils', () => {
     fs.writeFileSync(
       path.join(testDir, 'pkg-c', 'package.json'),
       JSON.stringify({
-        name: '@pixelastic-ai/pkg-c',
+        name: '@fetuye/pkg-c',
         version: '3.0.0',
         private: true,
         scripts: { build: 'echo build' },
@@ -54,11 +54,11 @@ describe('utils', () => {
     fs.writeFileSync(
       path.join(testDir, 'nested', 'pkg-d', 'package.json'),
       JSON.stringify({
-        name: '@pixelastic-ai/pkg-d',
+        name: '@fetuye/pkg-d',
         version: '4.0.0',
         scripts: { build: 'echo build' },
         dependencies: {
-          '@pixelastic-ai/pkg-a': 'workspace:*',
+          '@fetuye/pkg-a': 'workspace:*',
         },
       }),
     )
@@ -78,7 +78,7 @@ describe('utils', () => {
     it('should read existing package.json', () => {
       const result = readPackageJson(path.join(testDir, 'pkg-a'))
       expect(result).toEqual({
-        name: '@pixelastic-ai/pkg-a',
+        name: '@fetuye/pkg-a',
         version: '1.0.0',
         scripts: { build: 'echo build' },
       })
@@ -99,7 +99,7 @@ describe('utils', () => {
     it('should get full package info', () => {
       const result = getPackageInfo(path.join(testDir, 'pkg-a'), 'pkg-a')
       expect(result).toMatchObject({
-        name: '@pixelastic-ai/pkg-a',
+        name: '@fetuye/pkg-a',
         path: 'pkg-a',
         version: '1.0.0',
         private: false,
@@ -119,9 +119,9 @@ describe('utils', () => {
       expect(result?.hasBuildScript).toBe(false)
     })
 
-    it('should extract @pixelastic-ai dependencies', () => {
+    it('should extract @fetuye dependencies', () => {
       const result = getPackageInfo(path.join(testDir, 'nested', 'pkg-d'), 'nested/pkg-d')
-      expect(result?.dependencies).toEqual(['@pixelastic-ai/pkg-a'])
+      expect(result?.dependencies).toEqual(['@fetuye/pkg-a'])
     })
 
     it('should return null for non-package directory', () => {
@@ -135,19 +135,19 @@ describe('utils', () => {
       const result = getAllPackages(testDir)
       expect(result).toHaveLength(4)
       const names = result.map(p => p.name).sort()
-      expect(names).toEqual(['@pixelastic-ai/pkg-a', '@pixelastic-ai/pkg-b', '@pixelastic-ai/pkg-c', '@pixelastic-ai/pkg-d'])
+      expect(names).toEqual(['@fetuye/pkg-a', '@fetuye/pkg-b', '@fetuye/pkg-c', '@fetuye/pkg-d'])
     })
 
     it('should filter packages with build script', () => {
       const result = getAllPackages(testDir, '', { requireBuildScript: true })
       expect(result).toHaveLength(3)
       const names = result.map(p => p.name).sort()
-      expect(names).toEqual(['@pixelastic-ai/pkg-a', '@pixelastic-ai/pkg-c', '@pixelastic-ai/pkg-d'])
+      expect(names).toEqual(['@fetuye/pkg-a', '@fetuye/pkg-c', '@fetuye/pkg-d'])
     })
 
     it('should preserve path structure', () => {
       const result = getAllPackages(testDir)
-      const pkgD = result.find(p => p.name === '@pixelastic-ai/pkg-d')
+      const pkgD = result.find(p => p.name === '@fetuye/pkg-d')
       expect(pkgD?.path).toBe('nested/pkg-d')
     })
 
@@ -174,21 +174,21 @@ describe('utils', () => {
 
       // 检查是否包含已知的包
       const names = result.map(p => p.name)
-      expect(names).toContain('@pixelastic-ai/eslint')
-      expect(names).toContain('@pixelastic-ai/prettier')
+      expect(names).toContain('@fetuye/eslint')
+      expect(names).toContain('@fetuye/prettier')
     })
 
     // it('should filter workspace packages with build script', () => {
     //   const result = getAllWorkspacePackages({ requireBuildScript: true })
-    //   // "@pixelastic-ai/typescript-config 没有 build 脚本
+    //   // "@fetuye/typescript-config 没有 build 脚本
     //   const names = result.map(p => p.name)
-    //   expect(names).not.toContain('@pixelastic-ai/typescript-config')
+    //   expect(names).not.toContain('@fetuye/typescript-config')
     // })
 
     // it('should include private packages', () => {
     //   const result = getAllWorkspacePackages()
-    //   // "@pixelastic-ai/typescript-config 是 private
-    //   const tsconfig = result.find(p => p.name === '@pixelastic-ai/typescript-config')
+    //   // "@fetuye/typescript-config 是 private
+    //   const tsconfig = result.find(p => p.name === '@fetuye/typescript-config')
     //   expect(tsconfig?.private).toBe(true)
     // })
   })
