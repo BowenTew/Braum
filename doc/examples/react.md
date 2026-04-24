@@ -20,7 +20,7 @@ examples/react/
 ### eslint.config.js
 
 ```javascript
-import { defineESLintConfig } from '@braum/eslint'
+import { defineESLintConfig } from '@pixelastic-ai/eslint'
 
 export default await defineESLintConfig({
   enableReact: true,
@@ -46,7 +46,7 @@ export default await defineESLintConfig({
     "react-dom": "^19.2.0"
   },
   "devDependencies": {
-    "@braum/eslint": "workspace:*",
+    "@pixelastic-ai/eslint": "workspace:*",
     "@vitejs/plugin-react": "^5.1.1",
     "eslint": "^9.39.1",
     "vite": "^5.0.0"

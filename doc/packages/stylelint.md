@@ -1,11 +1,11 @@
-# @braum/stylelint
+# @pixelastic-ai/stylelint
 
 Stylelint configuration for CSS, SCSS, Less, and styled-components.
 
 ## Installation
 
 ```bash
-pnpm add -D @braum/stylelint
+pnpm add -D @pixelastic-ai/stylelint
 ```
 
 ## Quick Start
@@ -13,7 +13,7 @@ pnpm add -D @braum/stylelint
 Create `stylelint.config.js`:
 
 ```javascript
-import { defineStylelintConfig } from '@braum/stylelint'
+import { defineStylelintConfig } from '@pixelastic-ai/stylelint'
 
 export default defineStylelintConfig({})
 ```
@@ -32,7 +32,7 @@ export default defineStylelintConfig({})
 ### CSS
 
 ```javascript
-import { defineStylelintConfig } from '@braum/stylelint'
+import { defineStylelintConfig } from '@pixelastic-ai/stylelint'
 
 export default defineStylelintConfig({})
 ```
@@ -40,7 +40,7 @@ export default defineStylelintConfig({})
 ### SCSS
 
 ```javascript
-import { defineStylelintConfig } from '@braum/stylelint'
+import { defineStylelintConfig } from '@pixelastic-ai/stylelint'
 
 export default defineStylelintConfig({
   enableScss: true,
@@ -50,7 +50,7 @@ export default defineStylelintConfig({
 ### Vue SFC
 
 ```javascript
-import { defineStylelintConfig } from '@braum/stylelint'
+import { defineStylelintConfig } from '@pixelastic-ai/stylelint'
 
 export default defineStylelintConfig({
   enableVue: true,
@@ -60,7 +60,7 @@ export default defineStylelintConfig({
 ### Less
 
 ```javascript
-import { defineStylelintConfig } from '@braum/stylelint'
+import { defineStylelintConfig } from '@pixelastic-ai/stylelint'
 
 export default defineStylelintConfig({
   enableLess: true,
@@ -70,7 +70,7 @@ export default defineStylelintConfig({
 ### Styled Components
 
 ```javascript
-import { defineStylelintConfig } from '@braum/stylelint'
+import { defineStylelintConfig } from '@pixelastic-ai/stylelint'
 
 export default defineStylelintConfig({
   enableStyledComponents: true,
@@ -122,7 +122,7 @@ coverage/
 You can extend the configuration:
 
 ```javascript
-import { defineStylelintConfig } from '@braum/stylelint'
+import { defineStylelintConfig } from '@pixelastic-ai/stylelint'
 
 const config = defineStylelintConfig({
   enableScss: true,

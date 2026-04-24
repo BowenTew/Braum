@@ -1,7 +1,7 @@
-// const { usePrettier } = require('@braum/prettier')
+// const { usePrettier } = require('@pixelastic-ai/prettier')
 
 // module.exports = usePrettier({ xml: true })
 
-import { definePrettierConfig } from '@braum/prettier'
+import { definePrettierConfig } from '@pixelastic-ai/prettier'
 
 export default definePrettierConfig({ xml: true })

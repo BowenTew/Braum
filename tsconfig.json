@@ -1,5 +1,5 @@
 {
-  "extends": "@braum/typescript-config/tsconfig.base.json",
+  "extends": "@pixelastic-ai/typescript-config/tsconfig.base.json",
   "compilerOptions": {
     "rootDir": "./",
     "lib": ["ESNext"],

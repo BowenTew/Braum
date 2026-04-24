@@ -23,7 +23,7 @@ examples/vue/
 ### eslint.config.js
 
 ```javascript
-import { defineESLintConfig } from '@braum/eslint'
+import { defineESLintConfig } from '@pixelastic-ai/eslint'
 
 export default await defineESLintConfig({
   enableVue: true,
@@ -35,7 +35,7 @@ export default await defineESLintConfig({
 ### prettier.config.js
 
 ```javascript
-import { definePrettierConfig } from '@braum/prettier'
+import { definePrettierConfig } from '@pixelastic-ai/prettier'
 
 export default definePrettierConfig({})
 ```
@@ -44,7 +44,7 @@ export default definePrettierConfig({})
 
 ```json
 {
-  "extends": "@braum/typescript-config/tsconfig.web.json",
+  "extends": "@pixelastic-ai/typescript-config/tsconfig.web.json",
   "include": ["src/**/*", "src/**/*.vue"]
 }
 ```
@@ -68,9 +68,9 @@ export default definePrettierConfig({})
     "vue": "^3.5.24"
   },
   "devDependencies": {
-    "@braum/eslint": "workspace:*",
-    "@braum/prettier": "workspace:*",
-    "@braum/typescript-config": "workspace:*",
+    "@pixelastic-ai/eslint": "workspace:*",
+    "@pixelastic-ai/prettier": "workspace:*",
+    "@pixelastic-ai/typescript-config": "workspace:*",
     "@vitejs/plugin-vue": "^6.0.1",
     "eslint": "^9.39.1",
     "prettier": "^3.7.1",

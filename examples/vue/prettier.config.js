@@ -1,3 +1,3 @@
-import { definePrettierConfig } from '@braum/prettier'
+import { definePrettierConfig } from '@pixelastic-ai/prettier'
 
 export default definePrettierConfig({})

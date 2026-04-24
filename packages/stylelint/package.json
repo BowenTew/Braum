@@ -1,5 +1,5 @@
 {
-  "name": "@braum/stylelint",
+  "name": "@pixelastic-ai/stylelint",
   "version": "1.0.0",
   "description": "Stylelint config for Braum",
   "main": "dist/index.js",

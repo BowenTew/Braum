@@ -44,29 +44,29 @@ Install the packages you need:
 
 ```bash
 # ESLint configuration
-pnpm add -D @braum/eslint
+pnpm add -D @pixelastic-ai/eslint
 
 # Prettier configuration
-pnpm add -D @braum/prettier
+pnpm add -D @pixelastic-ai/prettier
 
 # Stylelint configuration
-pnpm add -D @braum/stylelint
+pnpm add -D @pixelastic-ai/stylelint
 
 # Commitlint configuration
-pnpm add -D @braum/commitlint
+pnpm add -D @pixelastic-ai/commitlint
 
 # Commitizen CLI tool
-pnpm add -D @braum/cz
+pnpm add -D @pixelastic-ai/cz
 
 # TypeScript configuration
-pnpm add -D @braum/typescript-config
+pnpm add -D @pixelastic-ai/typescript-config
 ```
 
 ## Example Usage
 
 ```javascript
 // eslint.config.js
-import { defineESLintConfig } from '@braum/eslint'
+import { defineESLintConfig } from '@pixelastic-ai/eslint'
 
 export default await defineESLintConfig({
   enableTypescript: true,

@@ -1,4 +1,4 @@
-import { defineESLintConfig } from '@braum/eslint'
+import { defineESLintConfig } from '@pixelastic-ai/eslint'
 
 const config = await defineESLintConfig({})
 

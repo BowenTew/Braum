@@ -7,13 +7,13 @@ This guide will help you install and configure Braum packages in your project.
 ### ESLint
 
 ```bash
-pnpm add -D @braum/eslint
+pnpm add -D @pixelastic-ai/eslint
 ```
 
 Create `eslint.config.js`:
 
 ```javascript
-import { defineESLintConfig } from '@braum/eslint'
+import { defineESLintConfig } from '@pixelastic-ai/eslint'
 
 export default await defineESLintConfig({
   enableTypescript: true,
@@ -24,13 +24,13 @@ export default await defineESLintConfig({
 ### Prettier
 
 ```bash
-pnpm add -D @braum/prettier
+pnpm add -D @pixelastic-ai/prettier
 ```
 
 Create `prettier.config.js`:
 
 ```javascript
-import { definePrettierConfig } from '@braum/prettier'
+import { definePrettierConfig } from '@pixelastic-ai/prettier'
 
 export default definePrettierConfig({
   xml: true,
@@ -40,13 +40,13 @@ export default definePrettierConfig({
 ### Stylelint
 
 ```bash
-pnpm add -D @braum/stylelint
+pnpm add -D @pixelastic-ai/stylelint
 ```
 
 Create `stylelint.config.js`:
 
 ```javascript
-import { defineStylelintConfig } from '@braum/stylelint'
+import { defineStylelintConfig } from '@pixelastic-ai/stylelint'
 
 export default defineStylelintConfig({
   enableScss: true,
@@ -56,13 +56,13 @@ export default defineStylelintConfig({
 ### Commitlint
 
 ```bash
-pnpm add -D @braum/commitlint
+pnpm add -D @pixelastic-ai/commitlint
 ```
 
 Create `commitlint.config.js`:
 
 ```javascript
-import { defineCommitlintConfig } from '@braum/commitlint'
+import { defineCommitlintConfig } from '@pixelastic-ai/commitlint'
 
 export default defineCommitlintConfig()
 ```
@@ -70,7 +70,7 @@ export default defineCommitlintConfig()
 ### Commitizen
 
 ```bash
-pnpm add -D @braum/cz
+pnpm add -D @pixelastic-ai/cz
 ```
 
 Add to `package.json`:
@@ -86,14 +86,14 @@ Add to `package.json`:
 ### TypeScript Config
 
 ```bash
-pnpm add -D @braum/typescript-config
+pnpm add -D @pixelastic-ai/typescript-config
 ```
 
 Create `tsconfig.json`:
 
 ```json
 {
-  "extends": "@braum/typescript-config/tsconfig.web.json",
+  "extends": "@pixelastic-ai/typescript-config/tsconfig.web.json",
   "compilerOptions": {
     "outDir": "./dist"
   }

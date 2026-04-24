@@ -19,7 +19,7 @@ examples/stylelint/
 ### stylelint.config.js
 
 ```javascript
-import { defineStylelintConfig } from '@braum/stylelint'
+import { defineStylelintConfig } from '@pixelastic-ai/stylelint'
 
 export default defineStylelintConfig({
   enableScss: true,
@@ -37,7 +37,7 @@ export default defineStylelintConfig({
     "stylelint:fix": "stylelint '**/*.{css,scss,less}' --fix"
   },
   "dependencies": {
-    "@braum/stylelint": "workspace:*"
+    "@pixelastic-ai/stylelint": "workspace:*"
   },
   "devDependencies": {
     "stylelint": "^16.12.0"
@@ -81,7 +81,7 @@ pnpm stylelint:fix
 Extend the configuration to customize rules:
 
 ```javascript
-import { defineStylelintConfig } from '@braum/stylelint'
+import { defineStylelintConfig } from '@pixelastic-ai/stylelint'
 
 const config = defineStylelintConfig({
   enableScss: true,

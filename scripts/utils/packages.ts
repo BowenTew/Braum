@@ -62,7 +62,7 @@ export function getPackageInfo(dir: string, packagePath: string): PackageInfo | 
     ...Object.keys((packageJson.dependencies as Record<string, string>) || {}),
     ...Object.keys((packageJson.devDependencies as Record<string, string>) || {}),
     ...Object.keys((packageJson.peerDependencies as Record<string, string>) || {}),
-  ].filter(dep => dep.startsWith('@braum/'))
+  ].filter(dep => dep.startsWith('@pixelastic-ai/'))
 
   return {
     name: (packageJson.name as string) || path.basename(dir),

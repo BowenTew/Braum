@@ -20,7 +20,7 @@ For general TypeScript projects:
 
 ```json
 {
-  "extends": "@braum/typescript-config/tsconfig.base.json",
+  "extends": "@pixelastic-ai/typescript-config/tsconfig.base.json",
   "compilerOptions": {
     "outDir": "./dist"
   }
@@ -33,7 +33,7 @@ For web applications using Vite or webpack:
 
 ```json
 {
-  "extends": "@braum/typescript-config/tsconfig.web.json",
+  "extends": "@pixelastic-ai/typescript-config/tsconfig.web.json",
   "compilerOptions": {
     "outDir": "./dist"
   }
@@ -46,7 +46,7 @@ For Node.js applications:
 
 ```json
 {
-  "extends": "@braum/typescript-config/tsconfig.node.json",
+  "extends": "@pixelastic-ai/typescript-config/tsconfig.node.json",
   "compilerOptions": {
     "outDir": "./dist"
   }
@@ -59,7 +59,7 @@ For library packages:
 
 ```json
 {
-  "extends": "@braum/typescript-config/tsconfig.lib.json",
+  "extends": "@pixelastic-ai/typescript-config/tsconfig.lib.json",
   "compilerOptions": {
     "outDir": "./dist"
   }

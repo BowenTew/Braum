@@ -1,11 +1,11 @@
-# @braum/typescript-config
+# @pixelastic-ai/typescript-config
 
 TypeScript configuration presets for strict type checking.
 
 ## Installation
 
 ```bash
-pnpm add -D @braum/typescript-config
+pnpm add -D @pixelastic-ai/typescript-config
 ```
 
 ## Available Presets
@@ -23,7 +23,7 @@ pnpm add -D @braum/typescript-config
 
 ```json
 {
-  "extends": "@braum/typescript-config/tsconfig.web.json",
+  "extends": "@pixelastic-ai/typescript-config/tsconfig.web.json",
   "compilerOptions": {
     "outDir": "./dist"
   }
@@ -34,7 +34,7 @@ pnpm add -D @braum/typescript-config
 
 ```json
 {
-  "extends": "@braum/typescript-config/tsconfig.node.json",
+  "extends": "@pixelastic-ai/typescript-config/tsconfig.node.json",
   "compilerOptions": {
     "outDir": "./dist"
   }
@@ -45,7 +45,7 @@ pnpm add -D @braum/typescript-config
 
 ```json
 {
-  "extends": "@braum/typescript-config/tsconfig.lib.json",
+  "extends": "@pixelastic-ai/typescript-config/tsconfig.lib.json",
   "compilerOptions": {
     "outDir": "./dist"
   }
@@ -141,7 +141,7 @@ You can extend and override the presets:
 
 ```json
 {
-  "extends": "@braum/typescript-config/tsconfig.web.json",
+  "extends": "@pixelastic-ai/typescript-config/tsconfig.web.json",
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
@@ -159,7 +159,7 @@ For monorepos, use project references:
 
 ```json
 {
-  "extends": "@braum/typescript-config/tsconfig.base.json",
+  "extends": "@pixelastic-ai/typescript-config/tsconfig.base.json",
   "compilerOptions": {
     "composite": true
   },

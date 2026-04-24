@@ -19,7 +19,7 @@ examples/eslint/
 ### eslint.config.js
 
 ```javascript
-import { defineESLintConfig } from '@braum/eslint'
+import { defineESLintConfig } from '@pixelastic-ai/eslint'
 
 export default await defineESLintConfig({
   enableTypescript: false,
@@ -30,7 +30,7 @@ export default await defineESLintConfig({
 ### prettier.config.js
 
 ```javascript
-import { definePrettierConfig } from '@braum/prettier'
+import { definePrettierConfig } from '@pixelastic-ai/prettier'
 
 export default definePrettierConfig({
   xml: true,
@@ -47,8 +47,8 @@ export default definePrettierConfig({
     "format": "prettier --write ."
   },
   "dependencies": {
-    "@braum/eslint": "workspace:*",
-    "@braum/prettier": "workspace:*"
+    "@pixelastic-ai/eslint": "workspace:*",
+    "@pixelastic-ai/prettier": "workspace:*"
   },
   "devDependencies": {
     "eslint": "^9.10.0"

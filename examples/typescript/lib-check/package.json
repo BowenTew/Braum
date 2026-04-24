@@ -1,5 +1,6 @@
 {
-  "name": "lib-check",
+  "name": "@pixelastic-ai-examples/lib-check",
+  "private": true,
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -12,7 +13,7 @@
   "license": "ISC",
   "packageManager": "pnpm@10.15.0",
   "devDependencies": {
-    "@braum/typescript-config": "workspace:*",
+    "@pixelastic-ai/typescript-config": "workspace:*",
     "typescript": "^5.9.3"
   }
 }

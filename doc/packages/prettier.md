@@ -1,11 +1,11 @@
-# @braum/prettier
+# @pixelastic-ai/prettier
 
 Prettier configuration with sensible defaults and XML plugin support.
 
 ## Installation
 
 ```bash
-pnpm add -D @braum/prettier
+pnpm add -D @pixelastic-ai/prettier
 ```
 
 ## Quick Start
@@ -13,7 +13,7 @@ pnpm add -D @braum/prettier
 Create `prettier.config.js`:
 
 ```javascript
-import { definePrettierConfig } from '@braum/prettier'
+import { definePrettierConfig } from '@pixelastic-ai/prettier'
 
 export default definePrettierConfig({})
 ```
@@ -48,7 +48,7 @@ export default definePrettierConfig({})
 ### Basic Usage
 
 ```javascript
-import { definePrettierConfig } from '@braum/prettier'
+import { definePrettierConfig } from '@pixelastic-ai/prettier'
 
 export default definePrettierConfig({})
 ```
@@ -56,7 +56,7 @@ export default definePrettierConfig({})
 ### With XML Support
 
 ```javascript
-import { definePrettierConfig } from '@braum/prettier'
+import { definePrettierConfig } from '@pixelastic-ai/prettier'
 
 export default definePrettierConfig({
   xml: true,
@@ -66,7 +66,7 @@ export default definePrettierConfig({
 ### Custom Overrides
 
 ```javascript
-import { definePrettierConfig } from '@braum/prettier'
+import { definePrettierConfig } from '@pixelastic-ai/prettier'
 
 export default definePrettierConfig({
   xml: true,

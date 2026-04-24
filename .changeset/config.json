@@ -1,11 +1,24 @@
 {
   "$schema": "https://unpkg.com/@changesets/config@3.0.0/schema.json",
-  "changelog": "@changesets/cli/changelog",
+  "changelog": [
+    "@changesets/changelog-github",
+    { "repo": "BowenTew/Braum" }
+  ],
   "commit": false,
   "fixed": [],
   "linked": [],
   "access": "public",
   "baseBranch": "main",
   "updateInternalDependencies": "patch",
-  "ignore": []
+  "ignore": [
+    "@pixelastic-ai/typescript-config",
+    "@pixelastic-ai-examples/base-check",
+    "@pixelastic-ai-examples/lib-check",
+    "@pixelastic-ai-examples/node-check",
+    "@pixelastic-ai-examples/web-check",
+    "@pixelastic-ai-examples/eslint",
+    "@pixelastic-ai-examples/react",
+    "@pixelastic-ai-examples/stylelint",
+    "@pixelastic-ai-examples/vue"
+  ]
 }

@@ -1,5 +1,5 @@
 {
-  "extends": "@braum/typescript-config/tsconfig.node.json",
+  "extends": "@pixelastic-ai/typescript-config/tsconfig.node.json",
   "compilerOptions": {
     "rootDir": "./src",
     "outDir": "./dist",
