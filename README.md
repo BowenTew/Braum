@@ -251,8 +251,8 @@ This project is licensed under the [Apache License 2.0](./LICENSE).
 
 ## 🏷️ Package Tags
 
-| Tag                        | Description                      |
-| -------------------------- | -------------------------------- |
+| Tag                         | Description                      |
+| --------------------------- | -------------------------------- |
 | `@fetuye/eslint`            | ESLint configuration             |
 | `@fetuye/prettier`          | Prettier configuration           |
 | `@fetuye/stylelint`         | Stylelint configuration          |

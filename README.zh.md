@@ -251,8 +251,8 @@ pnpm ci-check
 
 ## 🏷️ 包标签说明
 
-| 标签                       | 说明                  |
-| -------------------------- | --------------------- |
+| 标签                        | 说明                  |
+| --------------------------- | --------------------- |
 | `@fetuye/eslint`            | ESLint 配置           |
 | `@fetuye/prettier`          | Prettier 配置         |
 | `@fetuye/stylelint`         | Stylelint 配置        |
